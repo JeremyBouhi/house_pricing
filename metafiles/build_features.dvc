@@ -1,14 +1,14 @@
-cmd: python model/build_features.py
-md5: bb680653323a4fa3964d5532e195acee
+cmd: python house_pricing/build_features.py
+md5: 2cbf84b1c9a635d97a395a951cf5a3e6
 wdir: ..
 deps:
-- md5: 4f18d09fbd7a27a8895fcd57213e506b
-  path: model/build_features.py
-- md5: 184b4d23f168c42f50e4cc947f3b2a76
-  path: outputs/split_data.p
+- md5: 5deca114b57e0c416e941c01bf5b9326
+  path: house_pricing/build_features.py
+- md5: 79979f66af1c73ca58332c9da36a00f3
+  path: outputs/split_data.pkl
 outs:
-- md5: 47ab16aa7558b6d6ed60220ccc9e2790
-  path: outputs/split_featured.p
+- md5: 686df36b2d4d2aff29a28c19cddde00b
+  path: outputs/split_featured.pkl
   cache: true
   metric: false
   persist: false

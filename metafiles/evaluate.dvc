@@ -1,17 +1,16 @@
-cmd: python model/evaluate.py
-md5: bf7b521c9b7c10d250fb0263336e9c09
+cmd: python house_pricing/evaluate.py
+md5: 6a18757565a5477af2336e9e796de762
 wdir: ..
 deps:
-- md5: 68ebe24cfcf6ab868f68f9b75905a99d
-  path: model/evaluate.py
-- md5: b2845bd14d4e29b784ceeeb5816989b3
-  path: outputs/model.p
-- md5: 47ab16aa7558b6d6ed60220ccc9e2790
-  path: outputs/split_featured.p
+- md5: d33b8d462c906cdea23af5bf3200e9ed
+  path: house_pricing/evaluate.py
+- md5: 71ba99b53192a89bb7a49546dd6a8c82
+  path: outputs/model.pkl
+- md5: 686df36b2d4d2aff29a28c19cddde00b
+  path: outputs/split_featured.pkl
 outs:
-- md5: b11844190c3edd139d67732495ef4c71
-  path: outputs/metrics.csv
+- md5: 1ebcfdbf76205f16b1d089a79b072f25
+  path: outputs/metrics.txt
   cache: true
-  metric:
-    type: csv
+  metric: true
   persist: false
