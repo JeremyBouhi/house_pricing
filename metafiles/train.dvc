@@ -1,0 +1,14 @@
+cmd: python model/train.py
+md5: 086e274fc2cd2dd3b49136652bc94a15
+wdir: ..
+deps:
+- md5: ed0de98f20e21cfc5216c96eee166eb3
+  path: model/train.py
+- md5: 47ab16aa7558b6d6ed60220ccc9e2790
+  path: outputs/split_featured.p
+outs:
+- md5: b2845bd14d4e29b784ceeeb5816989b3
+  path: outputs/model.p
+  cache: true
+  metric: false
+  persist: false

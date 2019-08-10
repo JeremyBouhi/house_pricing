@@ -1,0 +1,14 @@
+cmd: python model/build_features.py
+md5: bb680653323a4fa3964d5532e195acee
+wdir: ..
+deps:
+- md5: 4f18d09fbd7a27a8895fcd57213e506b
+  path: model/build_features.py
+- md5: 184b4d23f168c42f50e4cc947f3b2a76
+  path: outputs/split_data.p
+outs:
+- md5: 47ab16aa7558b6d6ed60220ccc9e2790
+  path: outputs/split_featured.p
+  cache: true
+  metric: false
+  persist: false

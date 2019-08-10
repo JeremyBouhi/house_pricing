@@ -1,0 +1,14 @@
+cmd: python model/split_train_test.py
+md5: 9dc4b44a5dbd3dd0421f6fdbf90621cf
+wdir: ..
+deps:
+- md5: 7043d8ba7574e14137e4d5cbf0992817
+  path: model/split_train_test.py
+- md5: 352bac92b6f34bd959dd85d007815200
+  path: outputs/prepared_data.p
+outs:
+- md5: 184b4d23f168c42f50e4cc947f3b2a76
+  path: outputs/split_data.p
+  cache: true
+  metric: false
+  persist: false

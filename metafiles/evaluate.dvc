@@ -1,0 +1,17 @@
+cmd: python model/evaluate.py
+md5: bf7b521c9b7c10d250fb0263336e9c09
+wdir: ..
+deps:
+- md5: 68ebe24cfcf6ab868f68f9b75905a99d
+  path: model/evaluate.py
+- md5: b2845bd14d4e29b784ceeeb5816989b3
+  path: outputs/model.p
+- md5: 47ab16aa7558b6d6ed60220ccc9e2790
+  path: outputs/split_featured.p
+outs:
+- md5: b11844190c3edd139d67732495ef4c71
+  path: outputs/metrics.csv
+  cache: true
+  metric:
+    type: csv
+  persist: false

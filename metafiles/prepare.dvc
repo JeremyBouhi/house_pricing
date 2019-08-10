@@ -1,0 +1,14 @@
+cmd: python model/prepare.py
+md5: 4dcff7d355557dfce913cbb83dbc6dac
+wdir: ..
+deps:
+- md5: 57fce90c81521889c736445f058c4838
+  path: data/iris.csv
+- md5: fe955bf8dd3532646646f54edff81dd1
+  path: model/prepare.py
+outs:
+- md5: 352bac92b6f34bd959dd85d007815200
+  path: outputs/prepared_data.p
+  cache: true
+  metric: false
+  persist: false
