@@ -43,7 +43,7 @@ file-sending:
 data-sending: file-sending
 	dvc push;
 
-DATA_CONSISTENCY = $(shell dvc status | grep "Nothing to reproduce.";)
+DATA_CONSISTENCY = $(shell dvc status | grep "Data and pipelines are up to date.";)
 data-consistency-check:
 ifeq ($(DATA_CONSISTENCY),)
 		@echo "Aborting the creation of a new experiment... Run 'dvc repro' to generate data associated with the current source code";
