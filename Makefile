@@ -1,39 +1,7 @@
-################ INITIALISATION ################
-
-data/iris.csv:
-	wget -P data/ https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv;
-	dvc add data -f pipeline/data.dvc;
-
-## Get the IRIS dataset
-get-data: data/iris.csv
-
-outputs/:
-	mkdir outputs;
-
-TAGS = $(shell git tag;)
-remote/: outputs/ get-data
-	for tag in $(TAGS); do \
-		make -s recreate-experiment-$$tag; \
-		git checkout master; \
-    done
-
-## Create a local folder as if it was an external remote
-create-remote: remote/
-
-recreate-experiment-%:
-	@echo $(*:recreate-experiment-%=%) ; \
-    git checkout $(*:recreate-experiment-%=%); \
-	dvc repro; \
-	git add .; \
-	git commit -m "$(*:recreate-experiment-%=%)"; \
-	git tag -d $(*:recreate-experiment-%=%); \
-	git tag -a $(*:recreate-experiment-%=%) -m "commitMessage"; \
-	dvc push;
-
 ################ EXPERIMENT HANDLING ################
 
 file-sending:
-	git add model/*.py pipeline/*.dvc Dvcfile;
+	git add house_pricing/*.py metafiles/*.dvc Dvcfile;
 	git status;
 	read -p "[tagName] Enter the experiment name: " tagName; \
 	read -p "[commitMessage] Explain what you actually did: " commitMessage; \
@@ -47,9 +15,9 @@ DATA_CONSISTENCY = $(shell dvc status | grep "Data and pipelines are up to date.
 data-consistency-check:
 ifeq ($(DATA_CONSISTENCY),)
 		@echo "Aborting the creation of a new experiment... Run 'dvc repro' to generate data associated with the current source code";
-		exit 0;
+		@exit 0;
 else
-		make -s data-sending;
+		@make -s data-sending;
 endif
 
 ## Create a new experiment
