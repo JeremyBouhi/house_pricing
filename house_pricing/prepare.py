@@ -9,11 +9,8 @@ INPUT_PREPARE = os.path.join("data", "train.csv")
 
 def prepare(data_df: pd.DataFrame) -> pd.DataFrame:
     # Removing features with lots of null values
-    data_df = data_df.drop(["Alley", "PoolQC", "Fence", "MiscFeature", "FireplaceQu"], axis=1)
-    data_df.dropna()
-    data_df = input_df.filter(["MSSubClass", "MSZoning", "LotArea", "SalePrice"])
+    data_df = data_df.filter(["MSSubClass", "MSZoning", "LotArea", "SalePrice"])
     data_df = pd.get_dummies(data_df)
-    print(data_df)
     return data_df
 
 

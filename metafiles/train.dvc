@@ -1,13 +1,13 @@
 cmd: python house_pricing/train.py
-md5: 4397f91206ae699173526fb37e126ea3
+md5: 25e935e44eb1bbd110a206ed2e6069f0
 wdir: ..
 deps:
-- md5: 359d049576e3d22d43b8e91407089fdc
+- md5: 5bd18d4549c7d840a6a87a4167cd25f3
   path: house_pricing/train.py
 - md5: 6e00642152daf7277b3ea949efc617c1
   path: outputs/split_featured.pkl
 outs:
-- md5: 1cfefce6f54ee3b6d9e33fb106f16a81
+- md5: 72cb3a34a4250909868da6df148e063a
   path: outputs/model.pkl
   cache: true
   metric: false
