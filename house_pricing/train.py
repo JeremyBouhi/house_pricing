@@ -4,7 +4,6 @@ import logging
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeClassifier
-import xgboost as xgb
 import pandas as pd
 #from model.config import OUTPUT_TRAIN, OUTPUT_SPLIT
 import os
@@ -13,7 +12,7 @@ OUTPUT_TRAIN = os.path.join("outputs", "model.pkl")
 
 
 def train(X, y):
-    model = xgb.XGBRegressor()
+    model = LinearRegression()
     model.fit(X, y)
     return model
 

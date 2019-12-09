@@ -21,15 +21,15 @@ else
 endif
 
 ## Create a new experiment
-experiment: data-consistency-check
+exp: data-consistency-check
 
 ## Visualize all experiments
-visualize: create-remote
-	@dvc pull -T pipeline/evaluate.dvc;
+viz:
+	#@dvc pull -T pipeline/evaluate.dvc;
 	@dvc metrics show -T;
 
 ## Go back to an experiment
-goback-%: create-remote
+goback-%:
 	@git checkout $(*:goback-%=%);
 	@dvc pull;
 
