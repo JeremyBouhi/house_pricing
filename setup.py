@@ -17,7 +17,7 @@ setup(
         'pandas',
         'scikit-learn',
         'numpy',
-        'dvc'
+        'dvc[s3]'
     ],
     classifiers=[
         "Programming Language :: Python :: 3.7"

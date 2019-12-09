@@ -1,4 +1,4 @@
 ['remote "local"']
-url = /Users/jeremy.bouhi/Documents/dvc/house_pricing
+url = /Users/jeremy.bouhi/.dvc/house_pricing
 [core]
 remote = local

@@ -1,5 +1,4 @@
-md5: 3055bd17065a26c7ad28a8dbf4a37e27
-wdir: .
+md5: 8aa7955f5d8bdd7afa6a8d0ba93f45a1
 deps:
-- md5: 1ebcfdbf76205f16b1d089a79b072f25
+- md5: 649c9479dc470a8b265b7c9183523f8d
   path: outputs/metrics.txt

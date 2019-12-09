@@ -1,5 +1,5 @@
 cmd: python house_pricing/split_train_test.py
-md5: da0d5878f9a6fbc34328c0ff8948175e
+md5: 4105d4edffd0ac0cc45378c4a4270317
 wdir: ..
 deps:
 - md5: c4dc9a0eb6194953d31ff48bdbc662e3
@@ -7,7 +7,7 @@ deps:
 - md5: e5e70ba9ef7eb057513ba070ba75773d
   path: outputs/prepared_data.pkl
 outs:
-- md5: 79979f66af1c73ca58332c9da36a00f3
+- md5: 0bc1ec459331fdb0110179f2a46a29cd
   path: outputs/split_data.pkl
   cache: true
   metric: false
